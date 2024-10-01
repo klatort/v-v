@@ -4,6 +4,10 @@ import model.Order;
 import model.User;
 
 public class DiscountCalculator {
+    private DiscountCalculator() {
+        throw new IllegalStateException("Utility class");
+      }
+
     public static double calculateDiscount(User user, Order order) {
         if ("premium".equals(user.getUserType())) {
             return 0.15;  // Magic number
